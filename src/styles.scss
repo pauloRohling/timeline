@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://rsms.me/inter/inter.css");
+
+body {
+  @apply flex min-h-dvh w-full overflow-hidden text-14 font-inter;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    @apply font-inter-var;
+  }
+}
+
+app-root {
+  @apply flex w-full;
+}
