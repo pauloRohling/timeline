@@ -1,0 +1,32 @@
+:host {
+  @apply shrink-0 rounded-md border px-2 py-[3px] text-12 font-medium leading-3;
+  @apply border-white/25 bg-neutral-600 text-white;
+
+  &.light {
+    @apply border-neutral-200 bg-neutral-100 text-neutral-700;
+  }
+
+  &.red {
+    @apply border-white/25 bg-red-600 text-white;
+
+    &.light {
+      @apply border-red-200 bg-red-100 text-red-700;
+    }
+  }
+
+  &.green {
+    @apply border-white/25 bg-green-600 text-white;
+
+    &.light {
+      @apply border-green-200 bg-green-100 text-green-700;
+    }
+  }
+
+  &.orange {
+    @apply border-white/25 bg-orange-600 text-white;
+
+    &.light {
+      @apply border-orange-200 bg-orange-100 text-orange-700;
+    }
+  }
+}

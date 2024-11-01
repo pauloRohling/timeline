@@ -5,11 +5,12 @@ import { LoremIpsum } from "lorem-ipsum";
 import { UserPictureComponent } from "./shared/ui/user-picture/user-picture.component";
 import { DateUtils } from "@utils/date.utils";
 import { Note } from "./shared/data/note/note.entity";
+import { TagComponent } from "./shared/ui/tag/tag.component";
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [RouterOutlet, UserPictureComponent],
+  imports: [RouterOutlet, UserPictureComponent, TagComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
