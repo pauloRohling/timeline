@@ -29,4 +29,12 @@
       @apply border-orange-200 bg-orange-100 text-orange-700;
     }
   }
+
+  &.violet {
+    @apply border-white/25 bg-violet-600 text-white;
+
+    &.light {
+      @apply border-violet-200 bg-violet-100 text-violet-700;
+    }
+  }
 }

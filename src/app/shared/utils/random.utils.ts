@@ -1,4 +1,8 @@
 export class RandomUtils {
+  static boolean(): boolean {
+    return !!Math.round(Math.random());
+  }
+
   static color(): string {
     const hex = () => {
       const n = RandomUtils.hex();

@@ -6,11 +6,13 @@ import { UserPictureComponent } from "./shared/ui/user-picture/user-picture.comp
 import { DateUtils } from "@utils/date.utils";
 import { Note } from "./shared/data/note/note.entity";
 import { TagComponent } from "./shared/ui/tag/tag.component";
+import { NoteComponent } from "./timeline/ui/note/note.component";
+import { RandomUtils } from "@utils/random.utils";
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [RouterOutlet, UserPictureComponent, TagComponent],
+  imports: [RouterOutlet, UserPictureComponent, TagComponent, NoteComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -34,6 +36,7 @@ export class AppComponent {
     return {
       id: crypto.randomUUID(),
       note: this.randomLoremIpsum.generateParagraphs(1),
+      isPublic: RandomUtils.boolean(),
       createdBy: uniqueNamesGenerator(this.randomConfig),
       createdAt,
       createdAtFromNow: DateUtils.fromNow(createdAt),

@@ -6,21 +6,6 @@
   </h1>
 
   @for (note of notes; track note.id) {
-    <section class="flex w-full flex-col gap-1">
-      <header class="flex w-full items-center gap-3">
-        <app-user-picture [name]="note.createdBy"></app-user-picture>
-
-        <div class="flex w-fit shrink-0 items-end gap-3">
-          <span class="font-semibold">{{ note.createdBy }}</span>
-          <span class="text-neutral-500 dark:text-neutral-200">{{ note.createdAtFromNow }}</span>
-        </div>
-
-        <app-tag [label]="'Private'" class="red" />
-      </header>
-
-      <div class="flex w-full pl-11">
-        <span>{{ note.note }}</span>
-      </div>
-    </section>
+    <app-note [note]="note" />
   }
 </section>

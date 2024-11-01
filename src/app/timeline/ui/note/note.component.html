@@ -1,0 +1,18 @@
+@let note_ = note();
+
+<header class="flex w-full items-center gap-3">
+  <app-user-picture [name]="note_.createdBy"></app-user-picture>
+
+  <div class="flex w-fit shrink-0 items-end gap-3">
+    <span class="font-semibold">{{ note_.createdBy }}</span>
+    <span class="text-neutral-500 dark:text-neutral-200">{{ note_.createdAtFromNow }}</span>
+  </div>
+
+  <app-tag
+    [label]="note_.isPublic ? 'Public' : 'Private'"
+    [ngClass]="note_.isPublic ? 'green' : 'red'" />
+</header>
+
+<div class="flex w-full pl-11">
+  <span>{{ note_.note }}</span>
+</div>
