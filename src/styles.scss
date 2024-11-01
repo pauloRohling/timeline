@@ -5,7 +5,7 @@
 @import url("https://rsms.me/inter/inter.css");
 
 body {
-  @apply flex min-h-dvh w-full overflow-hidden font-inter text-14 text-neutral-800 dark:text-white;
+  @apply flex min-h-dvh w-full font-inter text-14 text-neutral-800 dark:text-white;
 }
 
 @supports (font-variation-settings: normal) {
