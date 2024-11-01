@@ -4,6 +4,7 @@ import { Config, names, uniqueNamesGenerator } from "unique-names-generator";
 import { LoremIpsum } from "lorem-ipsum";
 import { UserPictureComponent } from "./shared/ui/user-picture/user-picture.component";
 import { DateUtils } from "@utils/date.utils";
+import { Note } from "./shared/data/note/note.entity";
 
 @Component({
   selector: "app-root",
@@ -27,7 +28,7 @@ export class AppComponent {
   private readonly defaultDate = Date.now() - 1000 * 60 * 47;
   private readonly day = 1000 * 60 * 60 * 24;
 
-  protected readonly notes = new Array(100).fill(0).map((_, index) => {
+  protected readonly notes: Note[] = new Array(100).fill(0).map((_, index) => {
     const createdAt = new Date(this.defaultDate - this.day * index);
     return {
       id: crypto.randomUUID(),
