@@ -1,5 +1,5 @@
 :host {
-  @apply shrink-0 rounded-md border px-2 py-[3px] text-12 font-medium leading-3;
+  @apply shrink-0 rounded border px-1.5 py-0.5 text-11 font-medium leading-3;
   @apply border-white/25 bg-neutral-600 text-white;
 
   &.light {

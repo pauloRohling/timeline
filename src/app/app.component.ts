@@ -29,10 +29,10 @@ export class AppComponent {
   });
 
   private readonly defaultDate = Date.now() - 1000 * 60 * 47;
-  private readonly day = 1000 * 60 * 60 * 24;
+  private readonly interval = 1000 * 60 * 60 * 15;
 
   protected readonly notes: Note[] = new Array(100).fill(0).map((_, index) => {
-    const createdAt = new Date(this.defaultDate - this.day * index);
+    const createdAt = new Date(this.defaultDate - this.interval * index);
     return {
       id: crypto.randomUUID(),
       note: this.randomLoremIpsum.generateParagraphs(1),
