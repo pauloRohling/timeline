@@ -1,2 +1,26 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid atque corporis debitis, dolores eaque
-  eos eum facere ipsam iusto modi nostrum nulla numquam odio omnis quaerat, quis ullam voluptas.</p>
+<section class="container-md mx-auto flex h-full flex-col gap-6 overflow-y-auto p-8">
+  <h1 class="flex items-center gap-3">
+    <span class="text-18 font-semibold">Comments</span>
+    <div
+      class="flex h-fit items-center justify-center rounded-md bg-red-600 px-2.5 py-1 text-12 font-medium leading-3 text-white">
+      <span>{{ notes.length }}</span>
+    </div>
+  </h1>
+
+  @for (note of notes; track note.id) {
+    <section class="flex w-full flex-col gap-1">
+      <header class="flex w-full items-center gap-3">
+        <app-user-picture [name]="note.createdBy"></app-user-picture>
+
+        <div class="flex w-full items-end gap-3">
+          <span class="font-semibold">{{ note.createdBy }}</span>
+          <span class="text-neutral-500 dark:text-neutral-200">{{ note.createdAtFromNow }}</span>
+        </div>
+      </header>
+
+      <div class="flex w-full pl-11">
+        <span>{{ note.note }}</span>
+      </div>
+    </section>
+  }
+</section>
