@@ -32,14 +32,32 @@ export class AppComponent {
   private readonly interval = 1000 * 60 * 60 * 15;
 
   protected readonly notes: Note[] = new Array(100).fill(0).map((_, index) => {
+    return this.generateRandomNoteWithReply(index);
+  });
+
+  private generateRandomNote(index: number): Note {
     const createdAt = new Date(this.defaultDate - this.interval * index);
     return {
       id: crypto.randomUUID(),
       note: this.randomLoremIpsum.generateParagraphs(1),
       isPublic: RandomUtils.boolean(),
+      replies: [],
       createdBy: uniqueNamesGenerator(this.randomConfig),
       createdAt,
       createdAtFromNow: DateUtils.fromNow(createdAt),
     };
-  });
+  }
+
+  private generateRandomNoteWithReply(index: number): Note {
+    const createdAt = new Date(this.defaultDate - this.interval * index);
+    return {
+      id: crypto.randomUUID(),
+      note: this.randomLoremIpsum.generateParagraphs(1),
+      isPublic: RandomUtils.boolean(),
+      replies: [this.generateRandomNote(index), this.generateRandomNote(index)],
+      createdBy: uniqueNamesGenerator(this.randomConfig),
+      createdAt,
+      createdAtFromNow: DateUtils.fromNow(createdAt),
+    };
+  }
 }

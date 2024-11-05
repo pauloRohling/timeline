@@ -13,5 +13,6 @@ import { NgClass } from "@angular/common";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NoteComponent {
+  readonly isReply = input<boolean>(false);
   readonly note = input.required<Note>();
 }

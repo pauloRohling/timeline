@@ -5,7 +5,13 @@
     <app-tag [label]="notes.length" class="red" />
   </h1>
 
-  @for (note of notes; track note.id) {
-    <app-note [note]="note" />
-  }
+  <div class="flex w-full flex-col">
+    @for (note of notes; track note.id) {
+      <app-note [note]="note" />
+
+      @for (reply of note.replies; track reply.id) {
+        <app-note [isReply]="true" [note]="reply" class="reply" />
+      }
+    }
+  </div>
 </section>

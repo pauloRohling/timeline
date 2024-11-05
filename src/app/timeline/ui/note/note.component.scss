@@ -1,3 +1,19 @@
 :host {
-  @apply flex w-full flex-col gap-1;
+  @apply relative flex w-full gap-3;
+
+  .center-line {
+    @apply relative;
+  }
+
+  .center-line:before {
+    @apply absolute bottom-0 left-4 top-0 w-px bg-neutral-200 content-[""];
+  }
+
+  .center-line-reply:before {
+    @apply absolute bottom-0 left-4 top-10 w-px bg-neutral-200 content-[""];
+  }
+
+  .curved-line:after {
+    @apply absolute left-4 h-4 w-7 rounded-es-lg border-b border-s border-neutral-200 border-opacity-100 content-[""];
+  }
 }
