@@ -10,7 +10,7 @@
       <app-note [note]="note" />
 
       @for (reply of note.replies; track reply.id) {
-        <app-note [isReply]="true" [note]="reply" class="reply" />
+        <app-note [note]="reply" [class.last-reply]="$last" class="reply" />
       }
     }
   </div>
