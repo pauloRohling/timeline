@@ -12,19 +12,13 @@
 
     <app-tag
       [label]="note_.isPublic ? 'Public' : 'Private'"
-      [ngClass]="note_.isPublic ? 'green' : 'red'" />
+      [ngClass]="note_.isPublic ? 'tag-green' : 'tag-red'" />
   </header>
 
   <span class="min-h-5 w-full">{{ note_.note }}</span>
 
-  <footer class="flex w-full gap-3">
-    <button class="flex items-center gap-1 rounded px-1 hover:bg-neutral-100">
-      <ng-icon [name]="'tablerMessage'"></ng-icon>
-      Reply
-    </button>
-
-    <button class="flex items-center gap-1 rounded px-1 hover:bg-neutral-100">
-      <ng-icon [name]="'tablerDots'"></ng-icon>
-    </button>
+  <footer class="-ml-2 flex h-8 w-full items-center gap-1">
+    <button icon="tablerMessage" class="button-light button-sm" label="Reply"></button>
+    <button icon="tablerDots" class="button-light button-sm"></button>
   </footer>
 </section>

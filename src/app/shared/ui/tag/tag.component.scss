@@ -2,38 +2,38 @@
   @apply shrink-0 rounded border px-1.5 py-0.5 text-11 font-medium leading-3;
   @apply border-white/25 bg-neutral-600 text-white;
 
-  &.light {
+  &.tag-light {
     @apply border-neutral-200 bg-neutral-100 text-neutral-700;
   }
 
-  &.red {
+  &.tag-red {
     @apply border-white/25 bg-red-600 text-white;
 
-    &.light {
+    &.tag-light {
       @apply border-red-200 bg-red-100 text-red-700;
     }
   }
 
-  &.green {
+  &.tag-green {
     @apply border-white/25 bg-green-600 text-white;
 
-    &.light {
+    &.tag-light {
       @apply border-green-200 bg-green-100 text-green-700;
     }
   }
 
-  &.orange {
+  &.tag-orange {
     @apply border-white/25 bg-orange-600 text-white;
 
-    &.light {
+    &.tag-light {
       @apply border-orange-200 bg-orange-100 text-orange-700;
     }
   }
 
-  &.violet {
+  &.tag-violet {
     @apply border-white/25 bg-violet-600 text-white;
 
-    &.light {
+    &.tag-light {
       @apply border-violet-200 bg-violet-100 text-violet-700;
     }
   }

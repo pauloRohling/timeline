@@ -1,0 +1,13 @@
+@if (icon(); as icon) {
+  <ng-icon [name]="icon"></ng-icon>
+}
+
+@if (label(); as label) {
+  <span class="flex-1 truncate">{{ label }}</span>
+} @else {
+  <ng-content></ng-content>
+}
+
+@if (rightIcon(); as icon) {
+  <ng-icon [name]="icon"></ng-icon>
+}
