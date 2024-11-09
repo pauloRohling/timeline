@@ -1,0 +1,7 @@
+:host {
+  @apply relative flex w-full gap-3;
+
+  .left-line:before {
+    @apply absolute bottom-0 left-4 top-10 w-px bg-neutral-200 content-[""];
+  }
+}

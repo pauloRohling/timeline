@@ -5,10 +5,10 @@
 </div>
 
 <section class="flex w-full flex-col gap-1 pb-4">
-  <header class="flex h-8 w-full items-center gap-3">
+  <header class="flex min-h-8 w-full flex-wrap items-center gap-3">
     <span class="font-semibold">{{ note_.createdBy }}</span>
 
-    <span class="text-neutral-500 dark:text-neutral-200">{{ note_.createdAtFromNow }}</span>
+    <span class="text-neutral-500">{{ note_.createdAtFromNow }}</span>
 
     <app-tag
       [label]="note_.isPublic ? 'Public' : 'Private'"
@@ -18,7 +18,7 @@
   <span class="min-h-5 w-full">{{ note_.note }}</span>
 
   <footer class="-ml-2 flex h-8 w-full items-center gap-1">
-    <button icon="tablerMessage" class="button-light button-sm" label="Reply"></button>
-    <button icon="tablerDots" class="button-light button-sm"></button>
+    <button class="button-light button-sm" icon="tablerMessage" label="Reply"></button>
+    <button class="button-light button-sm" icon="tablerDots"></button>
   </footer>
 </section>

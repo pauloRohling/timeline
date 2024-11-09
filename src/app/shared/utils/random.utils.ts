@@ -13,6 +13,14 @@ export class RandomUtils {
   }
 
   static hex(): string {
-    return Math.floor(Math.random() * 255).toString(16);
+    return RandomUtils.int(255).toString(16);
+  }
+
+  static id(): string {
+    return crypto.randomUUID();
+  }
+
+  static int(max: number): number {
+    return Math.floor(Math.random() * max);
   }
 }

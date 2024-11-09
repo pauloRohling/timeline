@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
@@ -26,35 +25,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    plugin(({ addUtilities, theme }) => {
-      addUtilities({
-        ".page": {
-          display: "flex",
-          height: "100%",
-          width: "100%",
-          justifyContent: "center",
-        },
-        ".page-col": {
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
-          width: "100%",
-          alignItems: "center",
-        },
-        ".container-md": {
-          width: "100%",
-          maxWidth: theme("screens.md"),
-        },
-        ".container-lg": {
-          width: "100%",
-          maxWidth: theme("screens.lg"),
-        },
-        ".container-xl": {
-          width: "100%",
-          maxWidth: theme("screens.xl"),
-        },
-      });
-    }),
-  ],
+  plugins: [],
 };
