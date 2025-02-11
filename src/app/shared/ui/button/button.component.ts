@@ -3,12 +3,11 @@ import { Icon } from "../../data/icon/icons";
 import { NgIcon } from "@ng-icons/core";
 
 @Component({
-  selector: "button",
-  standalone: true,
-  imports: [NgIcon],
-  templateUrl: "./button.component.html",
-  styleUrl: "./button.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "button",
+    imports: [NgIcon],
+    templateUrl: "./button.component.html",
+    styleUrl: "./button.component.css",
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
   readonly icon = input<Icon>();

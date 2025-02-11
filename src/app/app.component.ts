@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+
 import { Config, names, uniqueNamesGenerator } from "unique-names-generator";
 import { LoremIpsum } from "lorem-ipsum";
-import { UserPictureComponent } from "./shared/ui/user-picture/user-picture.component";
+
 import { DateUtils } from "@utils/date.utils";
 import { Note } from "./shared/data/note/note.entity";
 import { Event } from "./shared/data/event/event.entity";
@@ -12,12 +12,11 @@ import { RandomUtils } from "@utils/random.utils";
 import { EventComponent } from "./timeline/ui/event/event.component";
 
 @Component({
-  selector: "app-root",
-  standalone: true,
-  imports: [RouterOutlet, UserPictureComponent, TagComponent, NoteComponent, EventComponent],
-  templateUrl: "./app.component.html",
-  styleUrl: "./app.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "app-root",
+    imports: [TagComponent, NoteComponent, EventComponent],
+    templateUrl: "./app.component.html",
+    styleUrl: "./app.component.css",
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   private readonly randomConfig: Config = {

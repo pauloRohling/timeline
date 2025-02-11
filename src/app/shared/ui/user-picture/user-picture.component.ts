@@ -4,12 +4,11 @@ import { ColorUtils } from "@utils/color.utils";
 import { NgClass } from "@angular/common";
 
 @Component({
-  selector: "app-user-picture",
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: "./user-picture.component.html",
-  styleUrl: "./user-picture.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "app-user-picture",
+    imports: [NgClass],
+    templateUrl: "./user-picture.component.html",
+    styleUrl: "./user-picture.component.css",
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserPictureComponent {
   readonly name = input.required<string>();
