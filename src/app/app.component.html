@@ -7,13 +7,13 @@
 
   <div class="flex w-full flex-col">
     @for (item of timelineItems; track item.id) {
-      @if (item.note) {
+      @if (item.event) {
+        <app-event [event]="item.event"></app-event>
+      } @else if (item.note) {
         <app-note [note]="item.note" />
         @for (reply of item.note.replies; track reply.id) {
           <app-note [note]="reply" [class.last-reply]="$last" class="reply" />
         }
-      } @else if (item.event) {
-        <app-event [event]="item.event"></app-event>
       }
     }
   </div>

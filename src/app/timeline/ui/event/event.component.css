@@ -4,6 +4,10 @@
   @apply relative flex w-full gap-3;
 
   .left-line:before {
-    @apply absolute top-10 bottom-0 left-4 w-px bg-neutral-200 content-[""];
+    @apply absolute top-8 bottom-0 left-4 w-px bg-neutral-200 content-[""];
+  }
+
+  &:last-child .left-line:before {
+    @apply content-none;
   }
 }
