@@ -12,11 +12,11 @@ import { RandomUtils } from "@utils/random.utils";
 import { EventComponent } from "./timeline/ui/event/event.component";
 
 @Component({
-    selector: "app-root",
-    imports: [TagComponent, NoteComponent, EventComponent],
-    templateUrl: "./app.component.html",
-    styleUrl: "./app.component.css",
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: "app-root",
+  imports: [TagComponent, NoteComponent, EventComponent],
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   private readonly randomConfig: Config = {

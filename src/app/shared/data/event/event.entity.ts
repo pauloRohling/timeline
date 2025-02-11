@@ -1,4 +1,4 @@
-import { Icon } from "../icon/icons";
+import { Icon } from "../icon/icon.type";
 
 export interface Event {
   id: string;

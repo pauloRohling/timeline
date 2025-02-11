@@ -1,11 +1,54 @@
-@import url("https://rsms.me/inter/inter.css");
+@import url("https://rsms.me/inter/inter.css") layer(base);
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --text-*: initial;
+  --text-10: 0.625rem;
+  --text-10--line-height: 0.875rem;
+  --text-10--letter-spacing: 0.01rem;
+  --text-11: 0.688rem;
+  --text-11--line-height: 0.875rem;
+  --text-11--letter-spacing: 0.005rem;
+  --text-12: 0.75rem;
+  --text-12--line-height: 1rem;
+  --text-12--letter-spacing: 0;
+  --text-13: 0.8125rem;
+  --text-13--line-height: 1rem;
+  --text-13--letter-spacing: -0.003rem;
+  --text-14: 0.875rem;
+  --text-14--line-height: 1.25rem;
+  --text-14--letter-spacing: -0.006rem;
+  --text-16: 1rem;
+  --text-16--line-height: 1.375rem;
+  --text-16--letter-spacing: -0.011rem;
+  --text-18: 1.125rem;
+  --text-18--line-height: 1.625rem;
+  --text-18--letter-spacing: -0.014rem;
+  --text-20: 1.25rem;
+  --text-20--line-height: 1.75rem;
+  --text-20--letter-spacing: -0.017rem;
+  --text-24: 1.5rem;
+  --text-24--line-height: 2.125rem;
+  --text-24--letter-spacing: -0.019rem;
+  --text-30: 1.875rem;
+  --text-30--line-height: 2.625rem;
+  --text-30--letter-spacing: -0.021rem;
+  --text-40: 2.5rem;
+  --text-40--line-height: 3.5rem;
+  --text-40--letter-spacing: -0.022rem;
+
+  --font-inter:
+    Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-inter-var:
+    Inter var, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 body {
-  @apply flex min-h-dvh w-full font-inter text-14 text-neutral-800;
+  @apply font-inter text-14 flex min-h-dvh w-full text-neutral-800;
 }
 
 @supports (font-variation-settings: normal) {

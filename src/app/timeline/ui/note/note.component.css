@@ -1,3 +1,5 @@
+@reference "../../../../styles.css";
+
 :host {
   @apply relative flex w-full gap-3;
 
@@ -5,7 +7,7 @@
     @apply pl-11;
 
     &:before {
-      @apply absolute bottom-0 left-4 top-0 w-px bg-neutral-200 content-[""];
+      @apply absolute top-0 bottom-0 left-4 w-px bg-neutral-200 content-[""];
     }
 
     &.last-reply:before {
@@ -13,13 +15,13 @@
     }
 
     .left-line:before {
-      @apply absolute -left-7 h-4 w-6 rounded-es-lg border-b border-s border-neutral-200 border-opacity-100 content-[""];
+      @apply absolute -left-7 h-4 w-6 rounded-es-lg border-s border-b border-neutral-200 content-[""];
     }
   }
 
   &:not(.reply) {
     .left-line:before {
-      @apply absolute bottom-0 left-4 top-10 w-px bg-neutral-200 content-[""];
+      @apply absolute top-10 bottom-0 left-4 w-px bg-neutral-200 content-[""];
     }
   }
 }
