@@ -12,7 +12,7 @@
       } @else if (item.note) {
         <app-note [note]="item.note" />
         @for (reply of item.note.replies; track reply.id) {
-          <app-note [note]="reply" [class.last-reply]="$last" class="reply" />
+          <app-note [class.last-reply]="$last" [note]="reply" class="reply" />
         }
       }
     }
